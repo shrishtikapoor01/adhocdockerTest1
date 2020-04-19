@@ -1,0 +1,34 @@
+QUESTION-1:
+Creating a container using docker image by name of alpine:name and the
+container parent process must be a command that can generate current time in the format of HH:MM:SS.
+
+Dockerfile.txt
+FROM alpine
+
+
+For building the image:
+docker build -t alpine:shrishti -f Dockerfile .
+
+run container:
+docker run --name shrishtic1q1 alpine:shrishti date -u +"%H:%M:%S"
+ RESULT:
+ 18:01:30
+
+
+QUESTION-2:
+To create a docker image and push it to docker hub with following details
+	using this github link https://github.com/redashu/summer2020dockertest.git to create docker image
+	docker image name must be adhoc:yourname like adhoc:ashutoshh
+	retag this as per the dockerid and push it to docker hub.
+  vim Dockerfile
+docker build -t adhoc:Shrishti.
+docker tag adhoc:shrishti srk/adhoc:shrishti
+docker push srk/adhoc:srk
+  
+  
+  QUESTION-5:
+  creating volume:
+docker volume create shrishtiq5
+
+attaching volume to container:
+docker run -it --name shrishti5q15 -v shrishtiq5:/etc/passwd- -v shrishtiq51:/adhocvol/user.txt alpine sh
